@@ -23,7 +23,7 @@ if (isset($_GET['url'])) {
   <div class="row">
     <div class="col-lg-12 text-center">
       <h1 class="mt-5">Admin panel</h1>
-      <p class="lead">You can send requests to your LAN machines from here.</p>
+      <p class="lead">You can send requests to your LAN machines from here. You can only request images.</p>
       <p class="lead"><?php include '../adminSecret.php'?></p>
 
       <form method="GET" action="">
