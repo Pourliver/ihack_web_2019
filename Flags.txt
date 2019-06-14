@@ -1,0 +1,4 @@
+1 - FLAG{DamnThisGuyCantCodeForShit}
+2 - FLAG{Backdoor_Means_Free_Flags!}
+3 - FLAG{Wait_This_Is_Not_An_Image!}
+4 - FLAG{MOM_LOOK_IM_GETTING_A_FLAG}

@@ -1,0 +1,5 @@
+# Block script kiddies with sqlmap. Its easy to bypass tho ;)
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} sqlmap
+
+RewriteRule . - [F]
