@@ -42,8 +42,12 @@ COPY adminSecret.php /var/www/
 # Fix vendor not being accessible
 RUN chmod -R 755 /var/www/html/
 
-# Expose apache's port
-EXPOSE 80
+# Expose apache's port 
+# EXPOSE 80 Let the docker-compose file manage this.
+
+# Fix annoying DNS error
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Entry point
-ENTRYPOINT service apache2 start && /bin/bash
+#ENTRYPOINT service apache2 start && /bin/bash
+CMD /usr/sbin/apache2ctl -D FOREGROUND

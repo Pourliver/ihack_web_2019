@@ -3,13 +3,6 @@
 ## Description
 This track contains 4 flags. It was meant to be a simple track, without any dead-ends. Each possible vulnerability is rewarded with a flag. I tried to keep it simple for beginners, meaning that if you think there's something worth looking into, you're probably right. The goal of this track isn't to guess, bruteforce, or bypass complex filters. It's simply to understand where the vulnerability is, and how to make some value out of it. Hope you enjoy!
 
-## Installation
-
-    git clone https://github.com/Pourliver/ihack_web_2019
-    cd ihack_web_2019
-    sudo docker build -t ihack_web .
-    sudo ./run.sh
-
 ## Walkthrough of each vulnerabilities
 1 - LFI
 - The LFI allows the attack to read the source of the php files
@@ -30,3 +23,4 @@ This track contains 4 flags. It was meant to be a simple track, without any dead
 - The stats.php page is vulnerable to an easy sql injection. It can be easily solved manually, or with sqlmap. The server blocks the sqlmap user-agent, so we have to tamper it with --random-agent
 
       sqlmap -u "http://127.0.0.1:8080/?page=home.php&mode=0" -p mode --threads 10 --level 5 --risk 3 --dbms sqlite3 --random-agent -a
+

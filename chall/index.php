@@ -12,8 +12,7 @@
     $page = $_GET['page'];
 
     // Requesting self will crash the server
-
-    if (!$page || $page == 'index' || strpos($page, '..') !== false) {
+    if (!$page || strpos($page, '..') !== false || strpos($page, 'index') !== false || strpos($page, 'etc') !== false || strpos($page, 'var') !== false) {
         $page = "home.php";
     }
 
@@ -21,7 +20,8 @@
       # Strips the parameter otherwise we can't include
       $page = substr($page, 0, strpos($page, '?'));
     }
-    require($page);
+
+    include($page);
   ?>
 
   <!-- Bootstrap core JavaScript -->

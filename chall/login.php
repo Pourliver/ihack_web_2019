@@ -8,4 +8,3 @@ require_once("p.php");
 <?php else: ?>
   <?php include('loginForm.php'); ?>
 <?php endif; ?> 
-k
